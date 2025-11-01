@@ -1,0 +1,135 @@
+Perfect bro 💪🔥
+Here’s your final optimized full prompt — ready to copy-paste directly into Replit’s “Prompt” section to generate the full React frontend for authentication of your LMS “Desired Career Academy.”
+It’s structured for maximum clarity, perfect Replit AI understanding, and future backend connection & email testing.
+
+🚀 FINAL REPLIT PROMPT (READY TO USE)
+You are building the frontend for an LMS web application named “Desired Career Academy”.
+
+🧠 TECH STACK
+    • React.js (Vite setup)
+    • Tailwind CSS (for styling)
+    • React Router v6 (for routing)
+    • Framer Motion (for animations)
+    • Axios (for API requests)
+
+🎯 GOAL
+Create a complete authentication module (frontend only for now) with proper email testing integration and API placeholders for later backend connection.
+The module should include:
+    1. Login Page — for Student, Teacher, and Admin
+    2. Signup Page — for Students only (must verify college email domain)
+    3. Forgot Password Page — for all users
+
+🧩 FEATURES & REQUIREMENTS
+1. Login Page
+    • Inputs:
+        ◦ Email
+        ◦ Password
+        ◦ Role selector (Student / Teacher / Admin)
+    • “Forgot Password?” link below the form
+    • Submit button with loading state
+    • On success, redirect based on role:
+        ◦ Student → /student/dashboard
+        ◦ Teacher → /teacher/dashboard
+        ◦ Admin → /admin/dashboard
+    • Show toast or alert if invalid credentials
+
+2. Signup Page (Students Only)
+    • Inputs:
+        ◦ Full Name
+        ◦ College Email
+        ◦ Password
+        ◦ Confirm Password
+    • Validate that the email domain matches a configurable domain (default: @college.edu)
+        ◦ Make the domain easily changeable in src/utils/config.js
+    • Show error if:
+        ◦ Invalid email format
+        ◦ Wrong domain
+        ◦ Passwords do not match
+    • On success:
+        ◦ Redirect to /login
+        ◦ Show toast: “Account created! Please log in.”
+
+3. Forgot Password Page
+    • Single input field: Email
+    • Button: “Send Reset Link”
+    • On submit:
+        ◦ Call /api/auth/forgot-password
+        ◦ Show success message:
+“Password reset link sent to your email.”
+
+4. UI DESIGN
+    • Modern and professional LMS-style UI
+    • Use Tailwind CSS for clean, minimal, and responsive design
+    • Centered authentication card with:
+        ◦ Rounded corners
+        ◦ Soft shadows
+        ◦ Slight gradient background (light blue/purple)
+    • Header:
+        ◦ Show app name “Desired Career Academy” (stylish heading)
+    • Add subtle Framer Motion fade-in animations for each form
+    • Use consistent button styles with hover and focus effects
+
+5. EMAIL TESTING SETUP
+Since the backend is not yet ready, simulate the email sending process:
+    • On clicking “Send Reset Link,” simulate an API call delay (2–3 seconds) using setTimeout
+    • After that, show success toast:
+“Password reset link sent to example@college.edu (simulation).”
+    • Use this setup to easily integrate with real email APIs later
+
+6. API INTEGRATION (Placeholder Ready)
+Use Axios for all API requests.
+Base URL must come from an environment variable in .env file:
+VITE_API_BASE_URL=https://your-backend-url.com
+API routes (placeholders):
+    • Login: POST → /api/auth/login
+    • Signup: POST → /api/auth/signup
+    • Forgot Password: POST → /api/auth/forgot-password
+Show proper loading indicators during API calls.
+
+7. ROUTING
+Setup routes using React Router v6:
+    • /login
+    • /signup
+    • /forgot-password
+Each page should be accessible directly via URL.
+
+8. STATE MANAGEMENT
+    • Use React Context API for authentication state
+(store user info & role after login)
+    • Use AuthContext inside /src/context/AuthContext.jsx
+    • Keep reusable API and validation logic modular in /src/utils/
+
+9. FOLDER STRUCTURE
+src/
+  components/
+    InputField.jsx
+    RoleSelector.jsx
+    AuthForm.jsx
+  pages/
+    Login.jsx
+    Signup.jsx
+    ForgotPassword.jsx
+  context/
+    AuthContext.jsx
+  utils/
+    api.js
+    config.js
+    validators.js
+  App.jsx
+  main.jsx
+
+10. BONUS DETAILS
+✅ Responsive on all screen sizes
+✅ Add form validation feedback (red borders, small text errors)
+✅ Use Framer Motion for smooth fade-in transitions
+✅ Add Tailwind-based loading spinner during API calls
+✅ Use react-hot-toast for notifications
+
+🧱 FINAL DELIVERABLE
+A fully functional frontend authentication system (Login, Signup, Forgot Password) built in React + Tailwind, with simulated email testing and placeholder API integration, ready to connect to your Replit backend later.
+
+💥 Project Title: Desired Career Academy - Auth Module (Frontend)
+💻 Built using: React, Tailwind, React Router, Axios, Framer Motion
+📧 Includes simulated email testing for password reset
+🔗 Ready for backend integration using Replit
+
